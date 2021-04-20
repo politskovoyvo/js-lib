@@ -2,7 +2,7 @@
   "name": "js-lib",
   "version": "1.0.0",
   "description": "politskovoy.vo js lib",
-  "main": "index.js",
+  "main": "./src/main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/politskovoyvo/js-lib/issues"
   },
-  "homepage": "https://github.com/politskovoyvo/js-lib#readme"
+  "homepage": "https://github.com/politskovoyvo/js-lib#readme",
+  "devDependencies": {
+    "typescript": "~4.1.2"
+  }
 }
