@@ -1,0 +1,19 @@
+{
+  "name": "js-lib",
+  "version": "1.0.0",
+  "description": "politskovoy.vo js lib",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/politskovoyvo/js-lib.git"
+  },
+  "author": "politskovoy.vo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/politskovoyvo/js-lib/issues"
+  },
+  "homepage": "https://github.com/politskovoyvo/js-lib#readme"
+}
