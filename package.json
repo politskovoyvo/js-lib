@@ -1,13 +1,13 @@
 {
   "name": "js_custom_lib",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "js lib",
-  "main": "./src/main.ts",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
-  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/politskovoyvo/js-lib.git"
