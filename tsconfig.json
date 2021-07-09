@@ -1,25 +1,30 @@
 {
-    "compileOnSave": false,
-	"compilerOptions": {
-		"baseUrl":"src/",
-		"outDir": "./dist",
-		"forceConsistentCasingInFileNames": true,
-		"strict": true,
-		"noImplicitReturns": true,
-		"noFallthroughCasesInSwitch": true,
-		"sourceMap": true,
-		"declaration": false,
-		"downlevelIteration": true,
-		"experimentalDecorators": true,
-		"moduleResolution": "node",
-		"importHelpers": true,
-		"target": "es5",
-		"lib": ["es6", "dom", "es7", "es2017"]
-	},
-	"include":[
-		"src/**/*"
-	],
-	"exclude":[
-		"node_modules"
-	]
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "src/",
+    "outDir": "./dist",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es5",
+    "lib": [
+      "es6",
+      "dom",
+      "es7",
+      "es2017"
+    ],
+    "declaration": true // создание d.ts
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

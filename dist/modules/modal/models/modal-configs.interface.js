@@ -1,3 +1,4 @@
+"use strict";
 // import { ElementRef, TemplateRef, Type } from '@angular/core';
 //
 // export interface IModalConfigs<T = any> {
@@ -13,3 +14,4 @@
 // 	top?: string;
 // 	content: TemplateRef<T> | null;
 // }
+//# sourceMappingURL=modal-configs.interface.js.map

@@ -1,3 +1,4 @@
+"use strict";
 // import {
 //     Component,
 //     ViewEncapsulation,
@@ -68,3 +69,4 @@
 //         document.body.classList.remove('modal-open');
 //     }
 // }
+//# sourceMappingURL=modal.component.js.map

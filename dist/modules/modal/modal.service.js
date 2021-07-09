@@ -1,3 +1,4 @@
+"use strict";
 // import {
 //     ApplicationRef,
 //     ComponentFactoryResolver,
@@ -64,3 +65,4 @@
 //         this.modals?.forEach((m) => m.close());
 //     }
 // }
+//# sourceMappingURL=modal.service.js.map
