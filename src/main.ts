@@ -1,5 +1,5 @@
-import plugins from './plugins'
+import Plugins from './plugins'
 
 export {
-    plugins
+    Plugins
 }
