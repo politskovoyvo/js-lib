@@ -1,2 +1,2 @@
-import plugins from './plugins';
-export { plugins };
+import Plugins from './plugins';
+export { Plugins };
