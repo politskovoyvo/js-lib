@@ -1,6 +1,6 @@
 {
   "name": "js_custom_lib",
-  "version": "0.0.10",
+  "version": "0.0.14",
   "description": "js lib",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
