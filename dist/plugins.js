@@ -7,20 +7,23 @@ var tslib_1 = require("tslib");
  * @param key
  */
 var findValueByKey = function (obj, key) {
-    if (typeof obj === 'string') {
-        return obj;
-    }
-    if (!obj) {
-        return 'Empty object';
-    }
-    for (var k in obj) {
-        if (k === key) {
-            return obj[k];
+    // Проверяем, является ли текущий объект объектом
+    if (typeof obj === "object" && obj !== null) {
+        // Проверяем наличие ключа в текущем объекте
+        if (key in obj) {
+            return obj[key]; // Если ключ найден, возвращаем его значение
         }
-        else if (typeof obj[k] === 'object') {
-            return findValueByKey(obj[k], key);
+        // Рекурсивно обходим все поля объекта
+        for (var prop in obj) {
+            if (obj.hasOwnProperty(prop)) {
+                var value = findValueByKey(obj[prop], key); // Рекурсивный вызов для вложенных объектов
+                if (value !== null) {
+                    return value; // Если ключ найден во вложенном объекте, возвращаем его значение
+                }
+            }
         }
     }
+    return '';
 };
 /**
  * Исключить одинаковые значения
@@ -36,20 +39,22 @@ var objectDiff = function (object1, object2) {
         var prevValue = object1[key];
         if (nextValue !== prevValue) {
             if (Array.isArray(nextValue)) {
-                var arr = [];
-                for (var ii = 0; ii < prevValue.length; ii++) {
-                    arr.push(objectDiff(prevValue[ii], nextValue[ii]));
-                }
-                if (arr.length) {
+                if (JSON.stringify(prevValue) !== JSON.stringify(nextValue)) {
                     // @ts-ignore
-                    different[key] = arr;
+                    different[key] = nextValue;
                 }
             }
             else if (typeof nextValue === "object") {
-                var objDiff = objectDiff(prevValue, nextValue);
-                if (Object.keys(objDiff).length) {
+                if (!nextValue) {
                     // @ts-ignore
-                    different[key] = objDiff;
+                    different[key] = null;
+                }
+                else {
+                    var objDiff = objectDiff(prevValue, nextValue);
+                    if (Object.keys(objDiff).length) {
+                        // @ts-ignore
+                        different[key] = objDiff;
+                    }
                 }
             }
             else {
